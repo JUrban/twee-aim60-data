@@ -1,0 +1,6 @@
+k(X0,k(X1,X2))	k(k(X0,X1),X2)
+k(X0,k(X1,X2))	k(X2,k(X1,X0))
+k(X0,k(X1,X2))	ld(k(X0,k(X2,X1)),e)
+k(X0,k(X1,X2))	k(X1,k(X0,X2))
+k(X0,k(X1,X2))	k(k(X1,X2),X0)
+k(X0,k(X1,X2))	k(k(X0,X2),X1)

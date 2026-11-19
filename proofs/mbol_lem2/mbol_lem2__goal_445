@@ -1,0 +1,4 @@
+k(X0,k(X1,X2))	k(k(X0,X1),X2)
+k(X0,k(X1,X2))	k(X0,k(X2,X1))
+k(X0,k(X1,t(X2,X3)))	t(k(X0,k(X1,X2)),X3)
+k(X0,k(X1,t(X2,X3)))	k(X0,k(X2,t(X1,X3)))
