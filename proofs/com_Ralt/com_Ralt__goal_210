@@ -1,0 +1,2 @@
+m(X0,X1)	m(X1,X0)
+a(ld(m(X0,X1),X2),X3,X4)	a(ld(m(X1,X0),X2),X3,X4)

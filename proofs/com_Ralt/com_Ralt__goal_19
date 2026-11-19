@@ -1,0 +1,4 @@
+m(X0,X1)	m(X1,X0)
+X0	m(X1,ld(X1,X0))
+ld(X0,m(X1,X2))	m(X3,ld(X3,ld(X0,m(X1,X2))))
+ld(X0,m(X1,X2))	m(X3,ld(X3,ld(X0,m(X2,X1))))
