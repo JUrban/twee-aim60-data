@@ -1,0 +1,6 @@
+k(X0,X1)	k(X1,X0)
+e	k(k(X0,X1),X2)
+e	k(X0,k(X1,X2))
+k(X0,k(X1,X2))	k(k(X1,X2),X0)
+k(X0,k(X1,X2))	k(k(X3,X4),X5)
+k(X0,k(X1,X2))	k(X3,k(X4,X5))

@@ -1,0 +1,3 @@
+k(X0,X1)	k(X1,X0)
+k(X0,ld(X0,X1))	k(X0,ld(X0,t(X1,X0)))
+k(ld(X0,X1),X0)	k(ld(X0,t(X1,X0)),X0)
