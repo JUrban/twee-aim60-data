@@ -1,0 +1,1 @@
+ld(X0,m(X1,m(X0,l(ld(X0,ld(X1,X2)),X3,X4))))	t(m(X1,l(ld(X1,rd(X2,X0)),X3,X4)),X0)
