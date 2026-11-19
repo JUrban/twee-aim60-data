@@ -1,0 +1,3 @@
+X0	m(rd(X0,X1),X1)
+k(X0,X1)	ld(m(X1,X0),m(X0,X1))
+k(rd(X0,X1),X1)	ld(m(X1,rd(X0,X1)),X0)

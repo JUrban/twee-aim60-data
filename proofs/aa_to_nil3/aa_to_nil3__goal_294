@@ -1,0 +1,8 @@
+X0	m(rd(X0,X1),X1)
+k(ld(X0,e),X0)	k(rd(e,X0),X0)
+k(rd(e,X0),X0)	rd(ld(X0,e),rd(e,X0))
+k(ld(X0,e),X0)	rd(ld(X0,e),rd(e,X0))
+r(X0,X1,X2)	rd(m(m(X0,X1),X2),m(X1,X2))
+m(m(X0,X1),X2)	m(r(X0,X1,X2),m(X1,X2))
+ld(X0,e)	m(k(ld(X0,e),X0),rd(e,X0))
+m(m(X0,k(ld(X1,e),X1)),rd(e,X1))	m(r(X0,k(ld(X1,e),X1),rd(e,X1)),ld(X1,e))
