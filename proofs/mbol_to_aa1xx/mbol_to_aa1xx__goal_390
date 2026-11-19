@@ -1,0 +1,2 @@
+l(X0,X1,ld(X1,e))	m(X1,m(ld(X1,e),X0))
+l(X0,X1,ld(X1,e))	l(X0,ld(X1,e),X1)
