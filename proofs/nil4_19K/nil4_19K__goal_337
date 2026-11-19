@@ -1,0 +1,2 @@
+l(rd(e,ld(X0,X1)),ld(X0,X1),X0)	rd(e,rd(e,ld(X1,X0)))
+m(ld(X0,X1),k(ld(X1,X0),ld(X0,X1)))	rd(e,rd(e,ld(X0,X1)))
