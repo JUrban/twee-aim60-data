@@ -1,0 +1,4 @@
+k(t(X0,X1),X2)	t(k(X0,X2),X1)
+k(X0,t(X1,X2))	t(k(X0,X1),X2)
+k(rd(m(X0,X1),X0),X2)	t(k(X1,X2),X0)
+k(rd(m(X0,X1),X0),X2)	k(t(X1,X0),X2)

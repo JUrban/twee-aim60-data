@@ -1,0 +1,4 @@
+a(X0,X1,k(X2,X3))	e
+X0	m(X0,e)
+X0	ld(X1,m(X1,X0))
+a(X0,X1,k(X2,X3))	ld(X4,X4)
