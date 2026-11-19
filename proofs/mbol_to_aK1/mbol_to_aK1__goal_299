@@ -1,0 +1,1 @@
+a(ld(X0,X1),X0,X2)	ld(m(ld(X0,X1),m(X0,X2)),m(t(X1,X0),X2))
