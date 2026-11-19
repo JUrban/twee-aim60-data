@@ -1,0 +1,2 @@
+k(X0,l(X1,X2,X3))	k(l(X0,X2,X3),X1)
+k(X0,l(X1,X2,X3))	k(X1,ld(m(X3,m(X2,X0)),m(X3,X2)))
