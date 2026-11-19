@@ -1,0 +1,6 @@
+k(X0,X1)	k(t(X0,X1),X1)
+m(k(X0,X1),l(X1,X2,X3))	m(l(X1,X2,X3),k(X0,X1))
+m(l(t(X0,X1),X2,X3),k(X1,X0))	t(m(k(X1,X0),l(X0,X2,X3)),X1)
+ld(t(m(k(X0,X1),l(X1,X2,X3)),X0),X4)	m(k(X1,X0),ld(l(t(X1,X0),X2,X3),X4))
+ld(t(m(k(X0,X1),l(X1,X2,X3)),X0),X4)	m(k(t(X1,X0),X0),ld(l(t(X1,X0),X2,X3),X4))
+ld(t(m(l(X0,X1,X2),k(X3,X0)),X3),X4)	m(k(t(X0,X3),X3),ld(l(t(X0,X3),X1,X2),X4))
