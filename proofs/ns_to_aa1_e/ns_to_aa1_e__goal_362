@@ -1,0 +1,4 @@
+a(ld(X0,e),X1,X2)	a(rd(e,X0),X1,X2)
+X0	m(X0,e)
+a(X0,X1,X2)	a(rd(m(X3,X3),X0),X1,X2)
+a(X0,X1,X2)	a(rd(e,X0),X1,X2)
