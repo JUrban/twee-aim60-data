@@ -1,0 +1,7 @@
+X0	m(X0,e)
+X0	m(e,X0)
+m(m(X0,X1),m(X2,m(X0,X1)))	m(m(m(X0,m(X1,X2)),X0),X1)
+m(X0,m(X1,X0))	m(m(X0,X1),X0)
+m(X0,m(X1,m(X0,e)))	m(m(X0,e),m(X1,m(X0,e)))
+m(m(X0,X1),X0)	m(m(X0,X1),m(X0,e))
+m(X0,m(X1,m(X0,e)))	m(m(X0,X1),X0)
