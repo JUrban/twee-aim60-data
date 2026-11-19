@@ -1,0 +1,6 @@
+X0	t(X0,r(k(X0,X1),X2,X3))
+r(X0,X1,X2)	rd(m(m(X0,X1),X2),m(X1,X2))
+X0	m(X0,e)
+X0	rd(m(X0,X1),X1)
+X0	r(X0,X1,e)
+X0	t(X0,k(X0,X1))
