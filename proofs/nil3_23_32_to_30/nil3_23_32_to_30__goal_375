@@ -1,0 +1,5 @@
+X0	m(X1,ld(X1,X0))
+l(t(X0,X1),X2,X3)	t(l(X0,X2,X3),X1)
+l(X0,X1,X2)	ld(m(X2,X1),m(X2,m(X1,X0)))
+m(X0,m(X1,X2))	m(m(X0,X1),l(X2,X1,X0))
+m(X0,m(X1,t(ld(X1,e),X0)))	rd(m(l(ld(X1,e),X1,X0),X0),l(ld(X1,e),X1,X0))
