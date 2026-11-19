@@ -1,0 +1,4 @@
+a(k(X0,X1),X2,X3)	e
+X0	m(e,X0)
+X0	rd(m(X0,X1),X1)
+a(k(X0,X1),X2,X3)	rd(X4,X4)
