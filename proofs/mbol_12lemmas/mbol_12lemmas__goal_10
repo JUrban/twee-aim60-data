@@ -1,0 +1,2 @@
+t(t(X0,X1),X2)	t(t(X0,X2),X1)
+ld(X0,t(t(X1,X2),X3))	ld(X0,t(t(X1,X3),X2))
