@@ -1,0 +1,5 @@
+X0	t(rd(e,rd(e,X0)),ld(X0,e))
+k(X0,ld(X0,e))	rd(t(X0,ld(X0,e)),X0)
+k(t(rd(e,rd(e,X0)),ld(X0,e)),ld(X0,e))	rd(t(X0,ld(X0,e)),X0)
+k(t(rd(e,rd(e,X0)),ld(X0,e)),ld(X0,e))	k(t(rd(e,rd(e,X0)),ld(X0,e)),ld(t(rd(e,rd(e,X0)),ld(X0,e)),e))
+k(t(rd(e,rd(e,X0)),ld(X0,e)),ld(X0,e))	rd(t(X0,ld(X0,e)),t(rd(e,rd(e,X0)),ld(X0,e)))
