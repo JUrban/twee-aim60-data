@@ -1,0 +1,4 @@
+m(X0,X1)	m(X1,t(X0,X1))
+m(k(m(X0,X1),X2),X1)	m(k(m(X1,t(X0,X1)),X2),X1)
+m(m(X0,X1),r(k(m(X0,X1),X2),X1,t(X0,X1)))	m(m(k(m(X0,X1),X2),X1),t(X0,X1))
+m(m(X0,X1),r(k(m(X0,X1),X2),X1,t(X0,X1)))	m(m(k(m(X1,t(X0,X1)),X2),X1),t(X0,X1))
