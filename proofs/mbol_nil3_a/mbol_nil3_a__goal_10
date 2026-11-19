@@ -1,0 +1,9 @@
+l(X0,X1,X2)	ld(m(X2,X1),m(X2,m(X1,X0)))
+a(X0,X1,X2)	ld(m(X0,m(X1,X2)),m(m(X0,X1),X2))
+X0	m(X1,ld(X1,X0))
+m(m(X0,X1),X2)	m(m(X0,m(X1,X2)),a(X0,X1,X2))
+a(a(a(X0,X1,X2),X3,X4),X5,X6)	e
+X0	m(X0,e)
+m(a(a(X0,X1,X2),X3,X4),m(X5,X6))	m(m(a(a(X0,X1,X2),X3,X4),X5),X6)
+X0	ld(X1,m(X1,X0))
+X0	l(X0,X1,a(a(X2,X3,X4),X5,X6))

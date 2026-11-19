@@ -1,0 +1,4 @@
+t(t(X0,X1),X2)	t(t(X0,X2),X1)
+l(t(X0,X1),X2,X3)	t(l(X0,X2,X3),X1)
+l(t(t(X0,X1),X2),X3,X4)	t(l(t(X0,X1),X3,X4),X2)
+l(t(t(X0,X1),X2),X3,X4)	t(l(t(X0,X2),X3,X4),X1)
