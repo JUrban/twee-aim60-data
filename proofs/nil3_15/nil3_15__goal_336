@@ -1,0 +1,3 @@
+l(t(X0,X1),X2,X3)	t(l(X0,X2,X3),X1)
+m(l(X0,X1,X2),t(X3,X0))	m(t(X3,X0),t(l(X0,X1,X2),X3))
+m(l(X0,X1,X2),t(X3,X0))	m(t(X3,X0),l(t(X0,X3),X1,X2))
