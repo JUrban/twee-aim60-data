@@ -20,6 +20,7 @@ AIM60k repo). A goal is named `<original>__goal_<N>`.
 | `models/` | rm*.bin + .vocab: LightGBM rule models in twee's binary forest format (`--rule-model M --rule-vocab V`); rm4t is production's. gc1.pt: the hint generator (copy model). gnn2.pt: GNN v2 (offline only) | |
 | `sets/` | goal lists used by loops and experiments (`all` = all 51,784, `half1`/`half2` = the two random halves of the originals, ...) | one goal per line |
 | `fromzero/<run>/` | 2-hour runs from zero on half1 (PGA, PGC, PGD, ORA, ORD) and half2 (P2A, P2D), 6 workers: solved list and run log | as above |
+| `realproofs/<family>/<family>_NN.tar.xz` | printed twee proofs (`RESULT: Theorem` outputs) kept since 20 Nov 15:04, per run family (a run with its .xfer and _GML loops), parts of at most 10 MB; `realproofs/index.tsv.gz` says where each goal's proof is; `realproofs/README.md` lists the families | entries `<loop dir>/<goal>.proof` |
 | `climbs/<dir>/` | every sketch-climbing run (climb.py, 13-19 Nov; the live one, CLHL2, is updated by reruns). `climb.tsv.gz`: one row per twee run of the climb (target, tag, assumptions, THM/NO, used assumptions, CPU s, assumption labels, used labels, hints, fill lemmas used). `theories.tsv.gz`: the stronger theories offered. `fill.tsv.gz`: gap-filling runs (counts). From 19 Nov 17:00 also `true.tsv.gz` (each fill lemma: original, label, formula, canonical pair, target, tag), `assume.tsv.gz` (each assumption label's source goal and formula) and `used.tsv.gz` (each proof's used axioms, lemma sources included), and from 18:22 `fillattempts.tsv.gz` (every gap filling tried: original, formula, proved 0/1, target, tag). `sketches.tar.xz`: each sketch proof's steps (`# S=`, `# U=`, `# goal=` headers). `fillhints.tar.xz`: the fill runs' proof steps. `hints.tar.xz` + `solved.tsv`: the climber's own real proofs. `realized/`, `given/`: per original, the final runs' and the successful runs' given rules | latticedata.py reads a directory with these files unpacked |
 
 ## What is not here
@@ -41,5 +42,5 @@ mkdir -p L/given && for f in given/*.tar.xz; do tar -C L/given -xJf $f; done
 
 `hintdata_build.py` in the project's hints/exp directory (abs/ in hintwork) adds new proofs and the other files
 in further small commits. Without options it updates everything but the rule logs and the climbs; `--given` writes
-only the rule-log archives, one per original; `--climbs` writes climbs/ (archives are deterministic, commits at most
+only the rule-log archives, one per original; `--climbs` writes climbs/; `--realproofs` writes realproofs/ (archives are deterministic, commits at most
 about 10 MB). Each part is re-committed only if it changed.
