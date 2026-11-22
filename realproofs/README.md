@@ -30,16 +30,25 @@ proved before proof-keeping began; their proof steps are in `../proofs/`.
 | P2N, P2O | each with .xfer and _GML | exp48, half2 from zero, 5 hours (21 Nov 04:36–09:38): P2N = both exp44/45 options, P2O = P2N + `--knn-ctx 10 --head-class` |
 | P2G | P2G, P2G.xfer, P2G_GML | exp43's last minutes after proof-keeping started (117 goals) |
 | production | UL, XFL, GML, STEPJ, SW20/c*, ROOTS/t40 | the production loop and its side loops: transfer, derived-rule transfer, step joins, the 20 s sweep, the roots reruns |
-| smoke | HCT, KCT, QKC, QKT, RCT, YDT and their side loops | 2- to 6-worker smoke tests on sets/smoke487 (about 400 goals each) |
+| smoke | HCT, KCT, QKC, QKT, RCT, YDT, KDS, LSM, LTD, PIS, FRS, FRT and their side loops | short smoke tests of new options (1-6 workers, minutes) |
+| Z7, Z7C | each with .xfer and _GML | the Z7 pair, from zero on all goals, 6 workers, 8 hours (21 Nov): Z7 = the late-phase options (`--retry-class --yield-discount 2000 --reexplore 12:0.25 --knn-ctx 10 --head-class`), 43,769 solved; Z7C = without them (the 20 Nov system) |
+| Z8 | Z8, Z8.xfer, Z8_GML, Z8_GF | from zero on all goals, Z7's options + `--floor-ratio 20`, 6 workers, 6 hours (22 Nov 02:53–08:55), 42,917 solved |
+| P2Q, P2R, P2S | each with .xfer and _GML | exp49/50, half2 from zero (21 Nov): 1 s quick first runs, the control, 3 s retries |
+| P2T, P2U | each with .xfer and _GML | exp52, half2 from zero, 3 hours (21 Nov): the control and `--floor-ratio 20` |
+| P2V, P2W | each with .xfer and _GML | exp53, half2 from zero, 3 hours (21-22 Nov): the control and `--cp-renormalise-threshold 1000` |
+| profile | PRA, PRB, PRC, PRF | short runs under a profiler (21 Nov, the dispatcher's cost) |
+| exp54 | LAA, LAB | the late A/B: the 3,817 half2 goals Z7 left, in Z7's context, 4 workers, 3 hours (22 Nov): the control and `--head-time 20` |
+| exp56 | GMR, GMR2, GMR3 | retries of the derived-rule hits the live loop had given up on (22 Nov): newest hits; with the source runs' lemma axioms; longer passes |
+| exp57 | CW0-CW7, CW9 | twee's critical-pair weights, 300 late heads, one 20 s run each (CW9: 40 s), 22 Nov |
+| exp59 | HUB80 | 24 hub roots, one 80 s run each in Z8's context (22 Nov) |
 
 A `.xfer` dir holds the proofs of a run's transfer loop: a goal proved in a theory with more axioms, with the source
 goal's lemmas. A `_GML` dir holds the proofs of its derived-rule transfer, from rules that failed runs derived.
 
 ## Not complete yet
 
-The reruns of proved goals were paused at 21 Nov 10:47 to free CPU for exp49/50, with about 97,000 queued. At packing
-time P2N had 20,148 of its 21,702 proofs and P2O 19,687 of 21,940. exp49/50's arms (P2Q, P2R, P2S) had none yet.
-A later `--realproofs` run adds them.
+At the 22 Nov packing (about 15:35 UTC) the proof queue had caught up, so the families above are complete, except
+exp55's two arms (P2X, P2Z, half2 from zero from 14:23), which were still running and are left for a later run.
 
 Production's goals proved before 20 Nov 15:04 (all but 37 of loops/UL's) have no printed proof here. Their proof
 steps are in `../proofs/` (`--print-hints` format), and `THM_proofs.tar.gz` covers 31,980 goals.
