@@ -54,12 +54,11 @@ goal's lemmas. A `_GML` dir holds the proofs of its derived-rule transfer, from 
 
 ## Not complete yet
 
-At the last packing (23 Nov 19:34 UTC) the families above were complete, production and the live plain loop up to then.
-Not here yet:
+At the last packing (23 Nov 22:58 UTC) the families above were complete: production and the live plain loop up to
+19:34, exp65's arms Q5A and Q5B (half2 from zero, 23 Nov 16:55 to 22:55) in full. Not here yet:
 
-* exp65's arms Q5A, Q5B (half2 from zero, 23 Nov 16:55 to about 22:55), packed when they end;
-* the climbers (CLHL3, the live head climber; CLA67, CLB67, exp67's paired settings), as family `climbers` when
-  they end. Since 23 Nov 19:47 each climb run's proof is `<goal>.<run tag>.proof`: `s<k>` a sketch run, whose
+* the climbers (CLHL3 and CLHL4, the live head climbers; CLA67, CLB67, exp67's paired settings, and their one-run
+  controls CC67, CC67B; CLK69, exp69's key-goal climb), as family `climbers` when exp67 ends. Since 23 Nov 19:47 each climb run's proof is `<goal>.<run tag>.proof`: `s<k>` a sketch run, whose
   axioms include unproved goals (`assume_*`, true Prover9 steps), `final` or `direct` a real proof, `.weak` a run on
   a weakened goal. Before that, every run of a climb overwrote one `<goal>` file, so only the files without an
   `assume_` axiom (real proofs) are packed from then. In `index.tsv.gz` a climber row's goal is the target.
