@@ -29,10 +29,11 @@ proved before proof-keeping began; their proof steps are in `../proofs/`.
 | P2H, P2J, P2K | each with .xfer and _GML | exp44/45, half2 from zero, 6 workers, 5 hours (20–21 Nov): `--retry-class`; `--yield-discount 2000 --reexplore 12:0.25`; the control |
 | P2N, P2O | each with .xfer and _GML | exp48, half2 from zero, 5 hours (21 Nov 04:36–09:38): P2N = both exp44/45 options, P2O = P2N + `--knn-ctx 10 --head-class` |
 | P2G | P2G, P2G.xfer, P2G_GML | exp43's last minutes after proof-keeping started (117 goals) |
-| production | UL, XFL, GML, STEPJ, SW20/c*, ROOTS/t40 | the production loop and its side loops: transfer, derived-rule transfer, step joins, the 20 s sweep, the roots reruns |
-| smoke | HCT, KCT, QKC, QKT, RCT, YDT, KDS, LSM, LTD, PIS, FRS, FRT, KDA, KDB and their side loops | short smoke tests of new options (1-6 workers, minutes) |
+| production | UL, XFL, GML, STEPJ, SW20/c*, ROOTS/t40, CI1-CI4 | the production loop and its side loops: transfer, derived-rule transfer, step joins, the 20 s sweep, the roots reruns; CI1-CI4 (23 Nov): proofs of the plain sweeps (twee with lemma axioms only, no hints) imported and merged into UL |
+| smoke | HCT, KCT, QKC, QKT, RCT, YDT, KDS, LSM, LTD, PIS, FRS, FRT, KDA, KDB, PLS2, PLR1 and their side loops | short smoke tests of new options (1-6 workers, minutes) |
 | Z7, Z7C | each with .xfer and _GML | the Z7 pair, from zero on all goals, 6 workers, 8 hours (21 Nov): Z7 = the late-phase options (`--retry-class --yield-discount 2000 --reexplore 12:0.25 --knn-ctx 10 --head-class`), 43,769 solved; Z7C = without them (the 20 Nov system) |
 | Z8 | Z8, Z8.xfer, Z8_GML, Z8_GF | from zero on all goals, Z7's options + `--floor-ratio 20`, 6 workers, 6 hours (22 Nov 02:53–08:55), 42,917 solved |
+| Z9 | Z9, Z9.xfer, Z9_GML | from zero on all goals, Z8's options + `--lemma-ax` in the transfer and `--knn-drift 5`, 6 workers, 8 hours (23 Nov 02:46–10:47), 44,161 solved in its main loop |
 | P2Q, P2R, P2S | each with .xfer and _GML | exp49/50, half2 from zero (21 Nov): 1 s quick first runs, the control, 3 s retries |
 | P2T, P2U | each with .xfer and _GML | exp52, half2 from zero, 3 hours (21 Nov): the control and `--floor-ratio 20` |
 | P2V, P2W | each with .xfer and _GML | exp53, half2 from zero, 3 hours (21-22 Nov): the control and `--cp-renormalise-threshold 1000` |
