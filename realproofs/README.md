@@ -58,8 +58,11 @@ At the last packing (23 Nov 19:34 UTC) the families above were complete, product
 Not here yet:
 
 * exp65's arms Q5A, Q5B (half2 from zero, 23 Nov 16:55 to about 22:55), packed when they end;
-* the climbers (CLHL3, CLA67, CLB67). Their `proofs/` dirs hold sketch runs' proofs, which take unproved goals as
-  axioms (`assume_*`), so the packer leaves climber dirs out; a climber's real proofs go into `../climbs/`.
+* the climbers (CLHL3, the live head climber; CLA67, CLB67, exp67's paired settings), as family `climbers` when
+  they end. Since 23 Nov 19:47 each climb run's proof is `<goal>.<run tag>.proof`: `s<k>` a sketch run, whose
+  axioms include unproved goals (`assume_*`, true Prover9 steps), `final` or `direct` a real proof, `.weak` a run on
+  a weakened goal. Before that, every run of a climb overwrote one `<goal>` file, so only the files without an
+  `assume_` axiom (real proofs) are packed from then. In `index.tsv.gz` a climber row's goal is the target.
 
 Production's goals proved before 20 Nov 15:04 (all but 37 of loops/UL's) have no printed proof here. Their proof
 steps are in `../proofs/` (`--print-hints` format), and `THM_proofs.tar.gz` covers 31,980 goals.
