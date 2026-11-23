@@ -10,6 +10,7 @@ exp/proofq.py in the twee repo (`hints/`). The proofs are packed here by `hints/
 |---|---|
 | `<family>/<family>_NN.tar.xz` | the proofs of one run family. Each part is at most 10 MB; parts split by loop dir, then original, then goal number. Entries are `<loop dir>/<goal>.proof`, e.g. `Z6.xfer/aa1_12__goal_101.proof`. |
 | `index.tsv.gz` | `goal<TAB>loop dir<TAB>tarball`: where each proof is. |
+| `cond_status.tsv.gz` | for the cond and plainlive families: `goal<TAB>sweep dir<TAB>unproved siblings used<TAB>proved siblings used<TAB>kNN lemmas used` (sibling goal numbers, `-` if none). A `-` in the third column is an unconditional proof. |
 | `THM_proofs.tar.gz` | an earlier set (20 Nov), 31,980 proofs, entries `THM_proofs/<goal>.proof`. |
 
 The archives are deterministic (sorted names, mtime 0, no owners), so a rerun of the packer re-commits only the
@@ -44,14 +45,21 @@ proved before proof-keeping began; their proof steps are in `../proofs/`.
 | exp59 | HUB80 | 24 hub roots, one 80 s run each in Z8's context (22 Nov) |
 | P2X, P2Z | each with .xfer and _GML | exp55, half2 from zero, 4 workers, 6 hours (22 Nov 14:23–20:25): the control (21,592 solved) and `--knn-drift 5` (21,796) |
 | exp61 | RD5 | one 5 s run each for 300 of Z8's unsolved goals in its final context (22 Nov) |
+| P4A, P4B | each with .xfer and _GML | exp64, half2 from zero, 4 workers, 6 hours (23 Nov 10:52–16:53): the control and two plain levels in the cascade (`plk100s40@0`, `plk400s130@0`: lemma axioms only, no hints, no rule model) |
+| cond | cond/<sweep> | the plain sweeps of 23 Nov (hints/exp/condprove.py, outside loops/): one plain twee-pg61 run per goal, with sibling goals and the kNN nearest proven goals as lemma axioms (`lemma_goal_J`, `lemma_knn_I_<goal>`). Many use unproved siblings: true (they are Prover9 proof steps) but not proved by us, see cond_status.tsv.gz. The unconditional proofs of unsolved goals were also imported into production (CI1-CI4). Some sweeps (ZQ*, ZK*, ZG*, ZL*) ran in Z9's context, not production's |
+| plainlive | cond/PLNL/c<cycle><setting> | the live plain loop's cycles (abs/plainlive*.sh), every 30 minutes on the changed goals; as cond |
 
 A `.xfer` dir holds the proofs of a run's transfer loop: a goal proved in a theory with more axioms, with the source
 goal's lemmas. A `_GML` dir holds the proofs of its derived-rule transfer, from rules that failed runs derived.
 
 ## Not complete yet
 
-At the 22 Nov packings (about 15:35 and 20:30 UTC) the proof queue had caught up, so the families above are
-complete, production up to 20:30. exp60's arms (P3A, P3B, P3C, half2 from zero from 20:35) come in a later run.
+At the last packing (23 Nov 19:34 UTC) the families above were complete, production and the live plain loop up to then.
+Not here yet:
+
+* exp65's arms Q5A, Q5B (half2 from zero, 23 Nov 16:55 to about 22:55), packed when they end;
+* the climbers (CLHL3, CLA67, CLB67). Their `proofs/` dirs hold sketch runs' proofs, which take unproved goals as
+  axioms (`assume_*`), so the packer leaves climber dirs out; a climber's real proofs go into `../climbs/`.
 
 Production's goals proved before 20 Nov 15:04 (all but 37 of loops/UL's) have no printed proof here. Their proof
 steps are in `../proofs/` (`--print-hints` format), and `THM_proofs.tar.gz` covers 31,980 goals.
