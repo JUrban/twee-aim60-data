@@ -48,17 +48,18 @@ proved before proof-keeping began; their proof steps are in `../proofs/`.
 | P4A, P4B | each with .xfer and _GML | exp64, half2 from zero, 4 workers, 6 hours (23 Nov 10:52–16:53): the control and two plain levels in the cascade (`plk100s40@0`, `plk400s130@0`: lemma axioms only, no hints, no rule model) |
 | cond | cond/<sweep> | the plain sweeps of 23 Nov (hints/exp/condprove.py, outside loops/): one plain twee-pg61 run per goal, with sibling goals and the kNN nearest proven goals as lemma axioms (`lemma_goal_J`, `lemma_knn_I_<goal>`). Many use unproved siblings: true (they are Prover9 proof steps) but not proved by us, see cond_status.tsv.gz. The unconditional proofs of unsolved goals were also imported into production (CI1-CI4). Some sweeps (ZQ*, ZK*, ZG*, ZL*) ran in Z9's context, not production's |
 | plainlive | cond/PLNL/c<cycle><setting> | the live plain loop's cycles (abs/plainlive*.sh), every 30 minutes on the changed goals; as cond |
-| climbers | CLHL3, CLHL4, CLA67, CLB67, CC67.v1, CC67B.v1, CC67C, CC67D, CLK69, K70F, K70R, CLS71 | climb.py's dirs (climb.tsv): the head climbers, exp67's arms and their one-run controls, exp69/70's key-goal climbs, the live stalled-goal climber; `<goal>.<run tag>` per climb run (`s<k>` sketch runs with `assume_*` axioms, `final`/`direct` real proofs, `.weak` weakened goals) |
+| climbers | CLHL3, CLHL4, CLA67, CLB67, CC67.v1, CC67B.v1, CC67C, CC67D, CLK69, K70F, K70R, CLS71, F76S, F76C | climb.py's dirs (climb.tsv): the head climbers, exp67's arms and their one-run controls, exp69/70's key-goal climbs, the live stalled-goal climber; `<goal>.<run tag>` per climb run (`s<k>` sketch runs with `assume_*` axioms, `final`/`direct` real proofs, `.weak` weakened goals) |
 
 A `.xfer` dir holds the proofs of a run's transfer loop: a goal proved in a theory with more axioms, with the source
 goal's lemmas. A `_GML` dir holds the proofs of its derived-rule transfer, from rules that failed runs derived.
 
 ## Not complete yet
 
-At the last packing the families above were complete: production and the live plain loop up to 24 Nov 05:04 UTC, the
-climbers up to 24 Nov 03:49 (exp67's four dirs, CLHL3, CLHL4, CLK69, K70F and K70R in full, CLS71 up to then), exp65's
-arms Q5A and Q5B in full. Not here yet: the plain sweeps (family cond) since 23 Nov 19:34 (HLW1 and the others are
-packed when HLW1 ends), CLS71's later climbs and exp76's arms (F76S, F76C). Since 23 Nov 19:47 each climb run's proof is `<goal>.<run tag>`:
+At the last packing (24 Nov 08:56 UTC) the families cond, plainlive and climbers were complete: the plain sweeps
+(family cond) with HLW1 in full and exp81's and exp82's arms (P81*, H82*) up to then, the live plain loop's cycles,
+and the climbers (CLS71 up to then, exp76's arms F76S and F76C in full). Production was last packed on 24 Nov 05:04
+UTC, exp65's arms Q5A and Q5B are in full. Not here yet: production's later proofs, CLS71's later climbs, the rest of
+exp81's and exp82's arms. Since 23 Nov 19:47 each climb run's proof is `<goal>.<run tag>`:
 `s<k>` a sketch run, whose axioms include unproved goals (`assume_*`), `final` or `direct` a real proof, `.weak` a run
 on a weakened goal. Before that, every run of a climb overwrote one `<goal>` file, so only the files without an
 `assume_` axiom (real proofs) are packed from then. In `index.tsv.gz` a climber row's goal is the target.
